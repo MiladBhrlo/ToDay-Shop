@@ -24,7 +24,7 @@ public class EventDispatcher : IEventDispatcher
     #endregion
 
     #region Event Dispatcher
-    public async Task PublishDomainEventAsync<TDomainEvent>(TDomainEvent @event) where TDomainEvent : class, IDomainEvent
+    public async Task PublishDomainEventAsync<TDomainEvent>(TDomainEvent @event) where TDomainEvent : class, IDomainEvent, INotification
     {
         _stopwatch.Start();
 
