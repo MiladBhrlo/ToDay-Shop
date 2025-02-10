@@ -6,7 +6,7 @@ x-common-env: &common-env
 services:
   # PostgreSQL Database
   postgres:
-    image: postgres:13-alpine
+    image: postgres
     environment:
       POSTGRES_USER: ${POSTGRES_USER:-admin}
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-password}
@@ -37,7 +37,7 @@ services:
 
   # Keycloak Database
   keycloak-db:
-    image: postgres:13-alpine
+    image: postgres
     environment:
       POSTGRES_DB: keycloak
       POSTGRES_USER: ${KEYCLOAK_DB_POSTGRES_USER:-keycloak}
@@ -70,7 +70,7 @@ services:
 
   # RabbitMQ Service
   rabbitmq:
-    image: rabbitmq:3-management
+    image: masstransit/rabbitmq
     environment:
       RABBITMQ_DEFAULT_USER: ${RABBITMQ__USERNAME:-guest}
       RABBITMQ_DEFAULT_PASS: ${RABBITMQ__PASSWORD:-guest}
@@ -113,7 +113,9 @@ services:
 
   # Orders Service
   orders:
-    build: ./Orders
+    build:
+      context: ./Orders
+      dockerfile: ./src/03-Endpoints/ToDay-Shop.Orders.Endpoints.WebApp/Dockerfile
     env_file:
       - ./Orders/.env.orders.${ASPNETCORE_ENVIRONMENT:-Development}
     environment:
@@ -129,7 +131,9 @@ services:
 
   # Payments Service
   payments:
-    build: ./Payments
+    build:
+      context: ./Payments
+      dockerfile: ./src/03-Endpoints/ToDay-Shop.Payments.Endpoints.WebApp/Dockerfile
     env_file:
       - ./Payments/.env.payments.${ASPNETCORE_ENVIRONMENT:-Development}
     environment:
