@@ -7,4 +7,14 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="MediatR" Version="12.4.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" Version="9.0.1" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ToDay-Shop.Orders.Core.Contracts\ToDay-Shop.Orders.Core.Contracts.csproj" />
+    <ProjectReference Include="..\ToDay-Shop.Orders.Core.RequestResponse\ToDay-Shop.Orders.Core.RequestResponse.csproj" />
+  </ItemGroup>
+
 </Project>
