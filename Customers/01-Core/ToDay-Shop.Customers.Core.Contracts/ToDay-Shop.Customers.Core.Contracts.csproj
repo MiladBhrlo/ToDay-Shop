@@ -1,0 +1,16 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>ToDay_Shop.Customers.Core.Contracts</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ToDay-Shop.Customers.Core.Domain\ToDay-Shop.Customers.Core.Domain.csproj" />
+    <ProjectReference Include="..\ToDay-Shop.Customers.Core.RequestResponse\ToDay-Shop.Customers.Core.RequestResponse.csproj" />
+    <ProjectReference Include="..\ToDay-Shop.Customers.Core.Resources\ToDay-Shop.Customers.Core.Resources.csproj" />
+  </ItemGroup>
+
+</Project>
