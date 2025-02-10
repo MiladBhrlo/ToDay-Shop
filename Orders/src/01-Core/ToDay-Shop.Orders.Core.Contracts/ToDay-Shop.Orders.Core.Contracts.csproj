@@ -7,4 +7,9 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ToDay-Shop.Orders.Core.Domain\ToDay-Shop.Orders.Core.Domain.csproj" />
+    <ProjectReference Include="..\ToDay-Shop.Orders.Core.RequestResponse\ToDay-Shop.Orders.Core.RequestResponse.csproj" />
+  </ItemGroup>
+
 </Project>
