@@ -1,0 +1,46 @@
+{
+  "Routes": [
+    {
+      "DownstreamPathTemplate": "/api/customers/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "customers",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/customers/{everything}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Keycloak"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/orders/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "orders",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/orders/{everything}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Keycloak"
+      }
+    },
+    {
+      "DownstreamPathTemplate": "/api/payments/{everything}",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "payments",
+          "Port": 80
+        }
+      ],
+      "UpstreamPathTemplate": "/payments/{everything}",
+      "AuthenticationOptions": {
+        "AuthenticationProviderKey": "Keycloak"
+      }
+    }
+  ],
+  "GlobalConfiguration": {
+    "BaseUrl": "http://localhost:5000"
+  }
+}
