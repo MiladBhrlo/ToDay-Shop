@@ -1,0 +1,37 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <RootNamespace>ToDay_Shop.Payments.Endpoints.WebApp</RootNamespace>
+    <UserSecretsId>1f3c2031-acbe-49d2-b5bb-b1d46cf8920e</UserSecretsId>
+    <DockerDefaultTargetOS>Linux</DockerDefaultTargetOS>
+    <DockerfileContext>..\..\..</DockerfileContext>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="FluentValidation.AspNetCore" Version="11.3.0" />
+    <PackageReference Include="MassTransit.RabbitMQ" Version="8.3.6" />
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.JwtBearer" Version="9.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.OpenApi" Version="9.0.0" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="9.0.1">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Extensions.DependencyModel" Version="9.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Azure.Containers.Tools.Targets" Version="1.21.0" />
+    <PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+    <PackageReference Include="Scrutor" Version="6.0.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerGen" Version="7.2.0" />
+    <PackageReference Include="Swashbuckle.AspNetCore.SwaggerUI" Version="7.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\01-Core\ToDay-Shop.Payments.Core.ApplicationServices\ToDay-Shop.Payments.Core.ApplicationServices.csproj" />
+    <ProjectReference Include="..\..\01-Core\ToDay-Shop.Payments.Core.Contracts\ToDay-Shop.Payments.Core.Contracts.csproj" />
+    <ProjectReference Include="..\..\02-Infrastructor\Data\ToDay-Shop.Payments.Infrastructor.Data.PostgreSql.Commands\ToDay-Shop.Payments.Infrastructor.Data.PostgreSql.Commands.csproj" />
+    <ProjectReference Include="..\..\02-Infrastructor\Data\ToDay-Shop.Payments.Infrastructor.Data.PostgreSql.Queries\ToDay-Shop.Payments.Infrastructor.Data.PostgreSql.Queries.csproj" />
+  </ItemGroup>
+
+</Project>

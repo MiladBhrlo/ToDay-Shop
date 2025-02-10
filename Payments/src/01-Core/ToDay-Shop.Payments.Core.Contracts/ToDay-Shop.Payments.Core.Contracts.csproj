@@ -1,0 +1,15 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net9.0</TargetFramework>
+    <RootNamespace>ToDay_Shop.Payments.Core.Contracts</RootNamespace>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\ToDay-Shop.Payments.Core.Domain\ToDay-Shop.Payments.Core.Domain.csproj" />
+    <ProjectReference Include="..\ToDay-Shop.Payments.Core.RequestResponse\ToDay-Shop.Payments.Core.RequestResponse.csproj" />
+  </ItemGroup>
+
+</Project>
