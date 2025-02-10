@@ -33,6 +33,11 @@ public sealed class Order : AggregateRoot
             BusinessId = BusinessId.Value,
             CustomerId = CustomerId
         });
+
+        foreach (CreateOrderItemParameter item in parameter.ItemParameters)
+        {
+            AddItem(item);
+        }
     }
     #endregion
 
