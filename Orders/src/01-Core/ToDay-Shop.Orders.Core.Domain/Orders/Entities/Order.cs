@@ -30,6 +30,7 @@ public sealed class Order : AggregateRoot
 
         AddEvent(new OrderCreated
         {
+            OrderId=Id, // its better to use businessId insted of using id directly
             BusinessId = BusinessId.Value,
             CustomerId = CustomerId
         });
