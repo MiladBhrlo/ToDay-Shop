@@ -7,7 +7,7 @@ public static class NotNullGuardClause
         if (string.IsNullOrEmpty(message))
             throw new ArgumentNullException("Message");
 
-        if (value == null)
+        if (value is null)
             throw new InvalidOperationException(message);
     }
 }
